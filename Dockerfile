@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o main .
+RUN GOOS=linux GOARCH=amd64 go build -o main main.go
 
 # Final Stage - Using Distroless Image
 FROM gcr.io/distroless/base
@@ -20,5 +20,3 @@ COPY --from=build /app/static ./static
 EXPOSE 8080
 
 CMD ["./main"]
-
-# Docker file
