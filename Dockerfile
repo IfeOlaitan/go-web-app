@@ -10,7 +10,7 @@ COPY . .
 
 RUN GOOS=linux GOARCH=amd64 go build -o main main.go
 
-# Final Stage - Using a Distroless Image
+# Final Stage - Using Distroless Image
 FROM gcr.io/distroless/base
 
 COPY --from=build /app/main .
