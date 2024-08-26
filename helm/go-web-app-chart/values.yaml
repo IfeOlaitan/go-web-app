@@ -8,7 +8,7 @@ image:
   repository: ifeolaitan/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10549921615"
+  tag: "10567760862"
 
 ingress:
   enabled: false
